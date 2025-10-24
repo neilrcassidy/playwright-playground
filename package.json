@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "all-tests": "npx playwright test",
-    "ui-tests": "npx playwright test ui/",
-    "api-tests": "npx playwright test api/"
+    "ui-tests": "npx playwright test --project=chromium --project=firefox --project=webkit",
+    "headed-ui-tests": "npx playwright test --project=chromium --project=firefox --project=webkit --headed",
+    "api-tests": "npx playwright test --project=api",
+    "report-server": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
